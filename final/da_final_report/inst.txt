@@ -1,0 +1,17 @@
+What constitutes the final report? 
+
+1. Title, authors, affiliations --done
+2. Abstract - summary of what you have done and the results you have obtained --done
+3. Introduction to the context --done
+4. A very brief summary of the literature survey report (report only the very relevant previous work) --TODO
+5. Problem statement - specifically what do you seek to address? (Explain the data source and mention assumptions/ constraints, if any.) --Done
+[1 page]
+6. Proposed system - a block diagram summarizing your approach --done
+7. Detailed explanation of each component of the system --done
+[1-1.5 pages]
+8. Experiments and results with a discussion on the results --need tables and figures
+[1-1.5 pages]
+9. Conclusions --done
+[1 para]
+10. References (references, i.e., details of the papers cited on the fifth page) --done
+11. Contribution of each member of the team - what is the specific role? --done

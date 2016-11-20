@@ -1,0 +1,21 @@
+The field of education management has had strong progress in the last couple of decades with new technology and creative and innovative course approaches. With the amount of data being generated both in terms of content as well as grade there is tremendous scope to provide a data analytics solution to improve the teaching and learning experience of both students as well as teachers. Making an improvement in education management and improving learning experience can go a long way and have a strong impact in the world.
+
+One of the areas of difficulty for course advisors and professors lies in understanding the interest level and aptitude of the class right from day one and understanding the individual needs of each student. This problem is also a point of contention for students themselves as they do not have an idea as to how their interest levels will match the respective course and how much relative effort is needed. 
+
+We have thus started on a research project to build s system we have attempted to build takes into account, for each student, their previous performance in courses,their health,the amount of time they study etc and make a prediction for the performance of the student in a selected course. This analysis not only takes into account the previous grades and other demographic variables but also also takes into account the level of dependency between the prequisite courses and the selected course. That is, we have quantified the percentage of pre requsite that each course has. Although our long term vision is to apply these findings and build a system for the students of PES University, due to lack of availability of data with respect to PES Students we have built two predictive models using the UCI Exam Performance dataset with variables such as health,T1 and T2 performances,family relationships among others. We are happy to inform that we have gotten exciting results on the same about which my teammate will discuss soon.
+
+We have used neural network, a computational approach which is based on a large collection of neural units loosely modeling the way the brain solves problems with large clusters of biological neurons connected by axons.The goal of the neural network is to solve problems in the same way that the human brain would, although several neural networks are much more abstract. Modern neural network projects typically work with a few thousand to a few million neural units and millions of connections, which is still several orders of magnitude less complex than the human brain and closer to the computing power of a worm. In this project we are using a very simple nueral network approach to solve our problem of performance prediction.
+
+Our future enhancement includes integrating the results obtained on determining the prerequisite dependency and the predictive models built using the UCI Exam Performance dataset to build a system for PES University that aims to better predict student performance.
+
+Why is our solution important and useful:
+=========================================
+
+There are a number of applications where we feel our solution will make a strong impact. The most simple one we can think of is Elective Selection.
+
+As students, one of the areas of difficulty we face is selection of electives. Not only do we take into account the nature of the course and our level of interest in them, but we must also
+worry about whether we will be able to perform satisfactorially in them and our system can potentially guide a student with respect to which elective he/she might enjoy and excel in.
+
+We can also help Professors understand where each student in his course stands before the commencement of the course and thus potentially provide a smooth learning experience for students of various backgrounds and interest levels.
+
+One of our main objectives is also to help in the process of counselling, and making sure the potential of every student is realised to the extent that is possible. 
