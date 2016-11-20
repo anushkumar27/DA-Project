@@ -9,7 +9,7 @@
 					PES University, Bangalore\\
 					Karnataka, India 560085\\
 		USN:  \IEEEauthorrefmark{1}01FB14ECS037,
-			\IEEEauthorrefmark{2}01FB14ECS2XX,
+			\IEEEauthorrefmark{2}01FB14ECS247,
 			\IEEEauthorrefmark{3}01FB14ECS262\\
 		Email:  \IEEEauthorrefmark{1}anushkumar27@gmail.com,
 			\IEEEauthorrefmark{2}sreedhar1895@gmail.com,
@@ -179,6 +179,67 @@ to everyone had a personal computer at home and lived with their families. These
 The number of records in the Math database is 395, and 695 for the Portuguese dataset.
 
 The explanation of the attributes is given in Table \ref{table:attr-descr}.
+	%--------------------------------------------------------------------------- Expts and reslts----------------------------------------------------------------------------------
+	\section{Experiments and Results} \label{expts-reslts}
+
+In the previous section we went into details with respect to the models that were built in the project to predict student performance. The UCI Student Exam Performance Dataset was split into training and test data. Training data consisted of 70\% of the dataset and the remaining 30\% of the dataset was used as test data. The neural network as well as the linear model were trained and tested. This was done for both the Math as well as the Portuguese courses present in the dataset. The performance of the models were very good. This is shown in Fig. \ref{fig:math-lm} and Fig. \ref{fig:math-nn} which plots the real vs predicted values using the Linear Model as well as the Neural Network model for the Mathematics course. Similar results were obtained for the Portuguese course as well.
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{math_lm.png}
+	\caption{Real vs. Fitted Values (Linear Regression Model)}
+	\label{fig:math-lm}
+\end{figure}
+\begin{figure}
+	\includegraphics[width=\linewidth]{math_nn.png}
+	\caption{Real vs. Fitted Values (Neural Network Model)}
+	\label{fig:math-nn}
+\end{figure}
+
+We observed that both the linear model as well as the neural network performed in a similar fashion with the neural network having a slightly better RMSE value as compared to the linear model. In case of the Portuguese course, the linear model had a better RMSE value. The neural network we built using TensorFlow \cite{tensorflow2015-whitepaper} as described in the previous section had varying performance, as seen the table of our results (Tables \ref{table:res-mat} \& \ref{table:res-por}).
+
+	\subsection{Validation of Models}
+The next step was to validate our models. That is, we wanted to test how well it
+performs as compared to a predictive model that has already been applied to the
+dataset. This was done by comparing the RMSE values obtained by our models as compared to those obtained in the paper “Using Data Mining To Predict Secondary
+School Student Performance” authored by P. Cortez and A. Silva.
+
+% say the look at tables here
+\begin{table*}[!t]
+\renewcommand{\arraystretch}{1.3}
+\caption{Results of Predictions for Mathematics (RMSE)}
+\label{table:res-mat}
+\centering
+\begin{tabular}{|c c c|}
+\hline
+%header
+\bfseries Linear Model & \bfseries Neural Network (two layer) & \bfseries Deep Neural Network (three layer)\\
+\hline
+%body
+1.93 & 1.48 & 1.78 - 2.5\\
+\hline
+\end{tabular}
+\end{table*}
+
+\begin{table*}[!t]
+\renewcommand{\arraystretch}{1.3}
+\caption{Results of Predictions for Portuguese (RMSE)}
+\label{table:res-por}
+\centering
+\begin{tabular}{|c c c|}
+\hline
+%header
+\bfseries Linear Model & \bfseries Neural Network (two layer) & \bfseries Deep Neural Network (three layer)\\
+\hline
+%body
+1.21 & 1.51 & 1.48 - 2.05\\
+\hline
+\end{tabular}
+\end{table*}
+
+Thus, the results obtained show that neural network models in some cases have 
+obtained a better RMSE value. But most surprisingly, the linear model managed to perform better compared to most of the approaches used in Cortez et. al. \cite{ref:4}. This result provides us with a solid foundation to carry our research forward as with the addition of course dependency weights to our model which is our future enhancement we look to further improve the model and thus come one step closer to our aim of making an impact in the field of education through data analytics.
+
+	%---------------------------------------------------------------------------Conclusion----------------------------------------------------------------------------------
 
 \begin{table*}[!t]
 \renewcommand{\arraystretch}{1.3}
@@ -200,9 +261,9 @@ Mjob & mother's job (nominal: 'teacher', 'health' care related, civil 'services'
 Fjob & father's job (nominal: 'teacher', 'health' care related, civil 'services' (e.g. administrative or police), 'at\_home' or 'other')\\
 reason & reason to choose this school (nominal: close to 'home', school 'reputation', 'course' preference or 'other')\\
 guardian & student's guardian (nominal: 'mother', 'father' or 'other')\\
-traveltime & home to school travel time (numeric: 1 - <15 min., 2 - 15 to 30 min., 3 - 30 min. to 1 hour, or 4 - >1 hour)\\
-studytime & weekly study time (numeric: 1 - <2 hours, 2 - 2 to 5 hours, 3 - 5 to 10 hours, or 4 - >10 hours)\\
-failures & number of past class failures (numeric: n if 1<=n<3, else 4)\\
+traveltime & home to school travel time (numeric: 1 - $<$15 min., 2 - 15 to 30 min., 3 - 30 min. to 1 hour, or 4 - $>$1 hour)\\
+studytime & weekly study time (numeric: 1 - $<$2 hours, 2 - 2 to 5 hours, 3 - 5 to 10 hours, or 4 - $>$10 hours)\\
+failures & number of past class failures (numeric: n if 1 $\leq$ n $<$ 3, else 4)\\
 schoolsup & extra educational support (binary: yes or no)\\
 famsup & family educational support (binary: yes or no)\\
 paid & extra paid classes within the course subject (Math or Portuguese) (binary: yes or no)\\
@@ -221,48 +282,7 @@ absences & number of school absences (numeric: from 0 to 93)\\
 \hline
 \end{tabular}
 \end{table*}
-	%--------------------------------------------------------------------------- Expts and reslts----------------------------------------------------------------------------------
-	\section{Experiments and Results} \label{expts-reslts}
 
-In the previous section we went into details with respect to the models that were built in the project to predict student performance. The UCI Student Exam Performance Dataset was split into training and test data. Training data consisted of 70\% of the dataset and the remaining 30\% of the dataset was used as test data. The neural network as well as the linear model were trained and tested. This was done for both the Math as well as the Portuguese courses present in the dataset. The performance of the models were very good. This is shown in Fig. \ref{fig:math-lm} and Fig. \ref{fig:math-nn} which plots the real vs predicted values using the Linear Model as well as the Neural Network model for the Mathematics course. Similar results were obtained for the Portuguese course as well.
-
-\begin{figure}
-	\includegraphics[width=\linewidth]{math_lm.png}
-	\caption{Real vs. Fitted Values (Linear Regression Model)}
-	\label{fig:math-lm}
-\end{figure}
-\begin{figure}
-	\includegraphics[width=\linewidth]{math_nn.png}
-	\caption{Real vs. Fitted Values (Neural Network Model)}
-	\label{fig:math-nn}
-\end{figure}
-
-We observed that both the linear model as well as the neural network performed in a similar fashion with the neural network having a slightly better RMSE value as compared to the linear model. In case of the Portuguese course, the linear model had a better RMSE value. The neural network we built using TensorFlow \cite{tensorflow2015-whitepaper} as described in the previous section had varying performance, as seen the table of our results.
-
-	\subsection{Validation of Models}
-The next step was to validate our models. That is, we wanted to test how well it
-performs as compared to a predictive model that has already been applied to the
-dataset. This was done by comparing the RMSE values obtained by our models as compared to those obtained in the paper “Using Data Mining To Predict Secondary
-School Student Performance” authored by P. Cortez and A. Silva.
-
-% say the look at tables shit here
-\begin{table*}[!t]
-\renewcommand{\arraystretch}{1.3}
-\caption{Description of Attributes}
-\label{table:attr-descr}
-\centering
-\begin{tabular}{|r || l|}
-\hline
-%header
-\hline\hline
-%body
-\end{tabular}
-\end{table*}
-
-Thus, the results obtained show that neural network models in some cases have 
-obtained a better RMSE value. But most surprisingly, the linear model managed to perform better compared to most of the approaches used in Cortez et. al. \cite{Ref4:}. This result provides us with a solid foundation to carry our research forward as with the addition of course dependency weights to our model which is our future enhancement we look to further improve the model and thus come one step closer to our aim of making an impact in the field of education through data analytics.
-
-	%---------------------------------------------------------------------------Conclusion----------------------------------------------------------------------------------
 	\section{Conclusion}
 In this project, we introduced a system to predict student performance. Through this system we hope to make an impact in a number of areas such as student counseling, elective selection, understanding student interest levels before course commencement among others. We built three predictive models and neural network had a better accuracy in terms of RMSE values than the values presented by Cortez et. al. \cite{ref:4}, and the neural network built using TensorFlow \cite{tensorflow2015-whitepaper} seems to perform better, albeit with a varying degree of how well it performs. Reduction of error in any field is important and thus this reduction of RMSE value through our work this semester provides a solid foundation to build a very accurate student education support system. We also showed that a number of demographic variables affect student performance and it is not just previous grades although previous grades do have a strong influence. Our future work involves quantifying percentage of pre requisites for each course and using the weights obtained to improve the system.
 
