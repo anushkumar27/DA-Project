@@ -28,10 +28,10 @@ rmse = 0
 n = len(test_set.target)
 
 for i in range(n):
-	rmse += math.sqrt(math.pow(test_set.target[i] - pred[i][0],2))
+	rmse += math.pow(test_set.target[i] - pred[i][0],2)
 
 #rmse = math.sqrt(rmse)
-rmse /= n
+rmse = math.sqrt(rmse/n)
 
 print('rmse:',rmse)
 
