@@ -110,14 +110,14 @@ term frequency for the courses Artificial Intelligence is shown in Fig. \ref{fig
 However due to unavailability of PES University student performance data we were
 unable to integrate the findings to our model. Thus this component is slated to be a future
 enhancement to our system. The core of the system for this semester’s course project
-lies in the predictive models built, namely, a linear model and a deep neural network
+lies in the predictive models built, namely, a linear model and a neural network
 model for predicting student performance using the UCI Exam Performance dataset.
 However the component involving text analysis allowed us to apply concepts of text
 analysis learnt in this course and the work done will allow us to improve our model once
 we get PES University Student Performance Data.
 
 The second component we would like to discuss is the predictive models used to predict
-student performance. We built a linear model as well as a deep neural network and
+student performance. We built a linear model as well as a neural network and
 predicted student performance in Math and Portuguese based on the UCI Exam
 Performance Dataset\cite{Lichman:2013}\cite{ref:4}.
 
@@ -134,10 +134,10 @@ present in the UCI Exam Performance dataset is shown in Fig. \ref{neural-net}.
 The black lines show the connections between each layer and the weights on each
 connection while the blue lines show the bias term added in each step.
 
-We further improved this model and built a deep neural network classifier using TensorFlow \cite{tensorflow2015-whitepaper} with
+We also built deep neural network classifier using TensorFlow \cite{tensorflow2015-whitepaper} with
 3 hidden layers with 10, 20 and 10 neurons. The models were validated with that present
 in the paper “Using Data Mining to Predict Secondary School Student Performance “ by
-P Cortex and A Silva and exciting results were obtained which are discussed in Section \ref{expts-reslts}
+P Cortex and A Silva and results we obtained which are discussed in Section \ref{expts-reslts}
 
 We also built a linear model as for this particular problem of prediction for the purpose of comparison. The model was built with the same 9 predictors as that of the neural network as parameters with the final course performance outcome (G3) as the response variable.
 Comparisons in terms of RMSE values of the models used as well as the models used
@@ -181,7 +181,7 @@ The number of records in the Math database is 395, and 695 for the Portuguese da
 	%--------------------------------------------------------------------------- Expts and reslts----------------------------------------------------------------------------------
 	\section{Experiments and Results} \label{expts-reslts}
 
-In the previous section we went into details with respect to the models that were built in the project to predict student performance. The UCI Student Exam Performance Dataset was split into training and test data. Training data consisted of 70\% of the dataset and the remaining 30\% of the dataset was used as test data. The neural network as well as the linear model were trained and tested. This was done for both the Math as well as the Portuguese courses present in the dataset. The performance of the models were very good. This is shown in Fig. \ref{fig:math-lm} and Fig. \ref{fig:math-nn} which plots the real vs predicted values using the Neural Network model as well as the Linear Model for the Mathematics course. Similar results were obtained for the Portuguese course as well.
+In the previous section we went into details with respect to the models that were built in the project to predict student performance. The UCI Student Exam Performance Dataset was split into training and test data. Training data consisted of 70\% of the dataset and the remaining 30\% of the dataset was used as test data. The neural network as well as the linear model were trained and tested. This was done for both the Math as well as the Portuguese courses present in the dataset. The performance of the models were very good. This is shown in Fig. \ref{fig:math-lm} and Fig. \ref{fig:math-nn} which plots the real vs predicted values using the Linear Model as well as the Neural Network model for the Mathematics course. Similar results were obtained for the Portuguese course as well.
 
 \begin{figure}
 	\includegraphics[width=\linewidth]{math_lm.png}
@@ -194,7 +194,7 @@ In the previous section we went into details with respect to the models that wer
 	\label{fig:math-nn}
 \end{figure}
 
-We observed that both the linear model as well as the neural network performed in a similar fashion with the neural network having a slightly better RMSE value as compared to the linear model. In case of the Portuguese course, the linear model had a better RMSE value. However, on enhancing the neural network further using TensorFlow \cite{tensorflow2015-whitepaper} as described in the previous section, the RMSE value further improved and beat the linear model in both the courses.
+We observed that both the linear model as well as the neural network performed in a similar fashion with the neural network having a slightly better RMSE value as compared to the linear model. In case of the Portuguese course, the linear model had a better RMSE value. The neural network we built using TensorFlow \cite{tensorflow2015-whitepaper} as described in the previous section had varying performance, as seen the table of our results.
 
 	\subsection{Validation of Models}
 The next step was to validate our models. That is, we wanted to test how well it
@@ -204,12 +204,12 @@ School Student Performance” authored by P. Cortez and A. Silva.
 
 % say the look at tables shit here
 
-Thus, the results obtained show that through our enhanced neural network we have
-obtained a better RMSE value. This result provides us with a solid foundation to carry our research forward as with the addition of course dependency weights to our model which is our future enhancement we look to further improve the model and thus come one step closer to our aim of making an impact in the field of education through data analytics.
+Thus, the results obtained show that neural network models in some cases have 
+obtained a better RMSE value. But most surprisingly, the linear model managed to perform better compared to most of the approaches used in Cortez et. al. \cite{Ref4:}. This result provides us with a solid foundation to carry our research forward as with the addition of course dependency weights to our model which is our future enhancement we look to further improve the model and thus come one step closer to our aim of making an impact in the field of education through data analytics.
 
 	%---------------------------------------------------------------------------Conclusion----------------------------------------------------------------------------------
 	\section{Conclusion}
-In this project, we introduced a system to predict student performance. Through this system we hope to make an impact in a number of areas such as student counseling, elective selection, understanding student interest levels before course commencement among others. We built three predictive models and our enhanced neural network had a better accuracy in terms of RMSE values than the values presented by Cortez et. al. \cite{ref:4}. Reduction of error in any field is important and thus this reduction of RMSE value through our work this semester provides a solid foundation to build a very accurate student education support system. We also showed that a number of demographic variables affect student performance and it is not just previous grades although previous grades do have a strong influence. Our future work involves quantifying percentage of pre requisites for each course and using the weights obtained to improve the system.
+In this project, we introduced a system to predict student performance. Through this system we hope to make an impact in a number of areas such as student counseling, elective selection, understanding student interest levels before course commencement among others. We built three predictive models and neural network had a better accuracy in terms of RMSE values than the values presented by Cortez et. al. \cite{ref:4}, and the neural network built using TensorFlow \cite{tensorflow2015-whitepaper} seems to perform better, albeit with a varying degree of how well it performs. Reduction of error in any field is important and thus this reduction of RMSE value through our work this semester provides a solid foundation to build a very accurate student education support system. We also showed that a number of demographic variables affect student performance and it is not just previous grades although previous grades do have a strong influence. Our future work involves quantifying percentage of pre requisites for each course and using the weights obtained to improve the system.
 
 	%---------------------------------------------------------------------------Acknowledgment----------------------------------------------------------------------------------
 	\section*{Acknowledgment}

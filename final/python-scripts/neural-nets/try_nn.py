@@ -1,9 +1,26 @@
 import tensorflow as tf
 import numpy as np
 import math
+import shutil
+
+'''por: ~ 1.48 - 2.05'''
 
 STU_TRAINING = 'stu-por-train.csv'
 STU_TEST = 'stu-por-test.csv'
+MODEL_DIR = 'por-model'
+STEPS = 5550
+shutil.rmtree(MODEL_DIR, ignore_errors=True)
+
+
+'''mat: ~ 1.78 - 2.5'''
+'''
+STU_TRAINING = 'stu-mat-train.csv'
+STU_TEST = 'stu-mat-test.csv'
+MODEL_DIR = 'mat-model'
+STEPS = 2000
+shutil.rmtree(MODEL_DIR, ignore_errors=True)
+'''
+
 
 #training_set = tf.contrib.learn.datasets.base.load_csv(filename=IRIS_TRAINING, target = np.int)
 #test_set = tf.contrib.learn.datasets.base.load_csv(filename=IRIS_TEST, target = np.int)
@@ -16,9 +33,9 @@ feature_columns = [tf.contrib.layers.real_valued_column('', dimension = 9)]
 classifier = tf.contrib.learn.DNNClassifier(feature_columns=feature_columns,
                                             hidden_units = [10,20,10],
 					    n_classes = 21,
-					    model_dir = 'por_model')
+					    model_dir = MODEL_DIR)
 
-classifier.fit(x=training_set.data, y=training_set.target, steps=2000)
+classifier.fit(x=training_set.data, y=training_set.target, steps=STEPS)
 
 pred = list(classifier.predict(test_set.data, as_iterable=True))
 
