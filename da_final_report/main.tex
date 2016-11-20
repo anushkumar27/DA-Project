@@ -20,7 +20,9 @@
 	\pagenumbering{arabic}
 	%--------------------------------------------------------------------------- Abstract----------------------------------------------------------------------------------
 	\begin{abstract}
-In this project we introduce a neural network and linear model approach to predict performance of students studying in secondary school. The practice of examining large pre-existing databases in order to generate new information helps us predict the outcomes with some certainty. With the help of such outcomes it is easy to make some hard decisions easily and also to plan the future events, one such application is the aim of this project. We are keying in around 30 attributes of different category not only academics but also the socio-demographic condition of the student into the neural network. All this was possible with the data available in the UCI Machine Learning Repository's Student Performance Data Set. This further has an impact on course planning and can potentially improve education management. We aim to make the model dynamic such that the model alters based on student performance in test, assignment and project in the courses opted by the student. Future work includes using the model to generate a course approach plan for each student as well as a directed project allocation based on student interest given a repository of projects by the professor. As a direct outcome of this research, more efficient student prediction tools can be be developed, improving the quality of education and enhancing school resource management.
+In this project we introduce a neural network and linear model approach to predict performance of students studying in secondary school. The practice of examining large pre-existing databases in order to generate new information helps us predict the outcomes with some certainty. With the help of such outcomes it is easy to make some hard decisions easily and also to plan the future events, one such application is the aim of this project. We are using around 10 attributes of different category that are not only academical in nature but also taking into account the socio-demographic condition of the student into the picture. 
+%All this was possible with the data available in the UCI Machine Learning Repository's Student Performance Data Set \cite{Lichman:2013}\cite{ref:4}. 
+This has an impact on course planning and can potentially improve education management. We aim to make the model dynamic so that the model alters based on student performance in test, assignment and project in the courses opted by the student. The future enhancements includes using the model to generate a course approach plan for each student as well as a directed project allocation based on student interest given a repository of projects by the professor. As a direct outcome of this research, more efficient student prediction tools can be be developed, improving the quality of education and enhancing school resource management.
 
 	\end{abstract}
 
@@ -30,7 +32,7 @@ The field of education management has had strong progress in the last couple of 
 
 One of the areas of difficulty for course advisors and professors lies in understanding the interest level and aptitude of the class right from day one and understanding the individual needs of each student. This problem is also a point of contention for students themselves as they do not have an idea as to how their interest levels will match the respective course and how much relative effort is needed. 
 
-We have thus started on a research project to build s system we have attempted to build takes into account, for each student, their previous performance in courses, their health, the amount of time they study, etc. and make a prediction for the performance of the student in a selected course. This analysis not only takes into account the previous grades and other demographic variables but also also takes into account the level of dependency between the prequisite courses (of the selected course) and the selected course. That is, we have quantified the percentage of prerequsite that each course has. Although our long term vision is to apply these findings and build a system for the students of PES University, due to lack of availability of data with respect to PES Students we have built and tried out various predictive models using the UCI Exam Performance dataset with variables such as health, T1 and T2 performances, family relationships, etc. We are happy to inform that we have gotten promising results on making predictions on student performances using the UCI dataset, which we feel will be able to be applied to the environment of PES University.
+We have thus started on a research project to build s system we have attempted to build takes into account, for each student, their previous performance in courses, their health, the amount of time they study, etc. and make a prediction for the performance of the student in a selected course. This analysis not only takes into account the previous grades and other demographic variables but also also takes into account the level of dependency between the prequisite courses (of the selected course) and the selected course. That is, we have quantified the percentage of prerequsite that each course has. Although our long term vision is to apply these findings and build a system for the students of PES University, due to lack of availability of data with respect to PES Students we have built and tried out various predictive models using the UCI Exam Performance Dataset \cite{Lichman:2013}\cite{ref:4} with variables such as health, T1 and T2 performances, family relationships, etc. We are happy to inform that we have gotten promising results on making predictions on student performances using the aforementioned dataset, which we feel will be able to be applied to the environment of PES University.
 
 % -----------------------------------------------------------------------This will be under Future Enhancements----------------------------------------------------------------
 %Our future enhancement includes integrating the results obtained on determining the prerequisite dependency and the predictive models built using the UCI Exam Performance dataset to build a system for PES University that aims to better predict student performance.
@@ -45,7 +47,7 @@ This kind of a system could also help Professors understand where each student i
 
 	\section{Summary of Literary Report}
 
-Put some stuff here.
+In our literary report, we had presented our original idea for this project. We had planned to predict the performance of a student in a given course depending on various factors, primarily their grades in the prerequisite courses and the level of dependency between the course and its preqrequisites, which we could not realise this semester.
 
 	\section{Problem Statement}
 Originally, in the beginning of this project, we were looking to build a predictive model that determined student performance in a selected course, by taking into account their previous performaces, giving special importance to their performance in the prerequistes that are officially cited in the selected course. However, as we were unable to acquire data that we needed for this purpose (namely, the data relating to the students' grades in courses taken in PES University), we were forced to redirect our attention to the UCI Student Performance dataset\cite{Lichman:2013}\cite{ref:4}, and due to the nature of the data, we were forced to drop our original project work we had done with text analytics to determine the level of dependency of a course on its prerequisites.
@@ -55,7 +57,7 @@ In this research project have built a model that takes into account, for each st
 
 In order to validate our models, we compared the performance of our models with those obtained in the research paper "Using Data Mining to Predict Secondary School Student Performance"\cite{ref:4} since the work in the aforementioned paper was done on the same dataset. On comparison, we have obtained exciting results, which have been discussed in section \ref{expts-reslts}.
 
-We plan to integrate the results obtained on determining the prerequisite dependency and the predictive models built using the UCI Exam Performance dataset to build a similar system for PES University that aims to better predict student performance.
+We plan to integrate the results obtained on determining the prerequisite dependency and the predictive models built using the UCI Exam Performance Dataset \cite{Lichman:2013}\cite{ref:4} to build a similar system for PES University that aims to better predict student performance.
 
 	%--------------------------------------------------------------------------- Proposed System----------------------------------------------------------------------------------
 
@@ -126,10 +128,10 @@ present in the UCI Exam Performance dataset is shown in Fig. \ref{neural-net}.
 The black lines show the connections between each layer and the weights on each
 connection while the blue lines show the bias term added in each step.
 
-We further improved this model and built a deep neural network classifier using Tensor Flow with
+We further improved this model and built a deep neural network classifier using TensorFlow \cite{tensorflow2015-whitepaper} with
 3 hidden layers with 10, 20 and 10 neurons. The models were validated with that present
 in the paper “Using Data Mining to Predict Secondary School Student Performance “ by
-P Cortex and A Silva and exciting results were obtained which are discussed in Section \ref{expts-rslts}
+P Cortex and A Silva and exciting results were obtained which are discussed in Section \ref{expts-reslts}
 
 We also built a linear model as for this particular problem of prediction for the purpose of comparison. The model was built with the same 9 predictors as that of the neural network as parameters with the final course performance outcome (G3) as the response variable.
 Comparisons in terms of RMSE values of the models used as well as the models used
@@ -173,58 +175,47 @@ The number of records in the Math database is 395, and 695 for the Portuguese da
 	%--------------------------------------------------------------------------- Expts and reslts----------------------------------------------------------------------------------
 	\section{Experiments and Results} \label{expts-reslts}
 
+In the previous section we went into details with respect to the models that were built in the project to predict student performance. The UCI Student Exam Performance Dataset was split into training and test data. Training data consisted of 70\% of the dataset and the remaining 30\% of the dataset was used as test data. The neural network as well as the linear model were trained and tested. This was done for both the Math as well as the Portuguese courses present in the dataset. The performance of the models were very good. This is shown in Fig. \ref{fig:math-lm} and Fig. \ref{fig:math-nn} which plots the real vs predicted values using the Neural Network model as well as the Linear Model for the Mathematics course. Similar results were obtained for the Portuguese course as well.
 
-
-	%--------------------------------------------------------------------------- Proposed Solution----------------------------------------------------------------------------------
-	\section{Proposed Solution}
-%In this section we will look at some of the works that has taken place pertaining to certain parts of the problem that we are trying to solve, but course wise analysis (considering more insights on the course) is not yet explored in the research literature. After doing some considerable literature survey on IEEEXplore\cite{ieee} and other sources\cite{googleSch} we seen many approaches, predictive models and recommender systems to predict student performance before commencement of the academic year. \cite{ref:1} \cite{ref:2} \cite{ref:3} With the existing approaches only predict the performance based on previously obtained grades of the student, which might not be a sufficient feature that would predict the outcome of that particular course performance. Particularly this paper\cite{ref:3} interests as this give in insight is to how data mining can help predict the effect of difficulty of a particular course on student's performance, the take away from this study is that it is really important to choose the right course of liking to avoid unnecessary pressures to score.
-To be done
-
-\iffalse
-	%--------------------------------------------------------------------------- Initial Analysis----------------------------------------------------------------------------------
 \begin{figure}
-	\includegraphics[width=\linewidth]{ppl.png}
-	\caption{Wordcloud done on notes of course - \textbf{Principles of Programming Languages}}
-	\label{fig:ppl}
+	\includegraphics[width=\linewidth]{math_lm.png}
+	\caption{Real vs. Fitted Values (Linear Regression Model)}
+	\label{fig:math-lm}
 \end{figure}
 \begin{figure}
-	\includegraphics[width=\linewidth]{ds.png}
-	\caption{Wordcloud done on notes of course -\textbf{ Data Structure and Algorithms} }
-	\label{fig:ds}
+	\includegraphics[width=\linewidth]{math_nn.png}
+	\caption{Real vs. Fitted Values (Neural Network Model)}
+	\label{fig:math-nn}
 \end{figure}
-	\section{Initial Analysis}
-So far, we have done some initial analysis on the course material for various courses, including a course on computer networks, data structures and algorithms, programming languages.
 
-The first step we took was identifying viable sources of course material, where in we could get enough text and material that describes the content and possibly indicates the dependencies of the course. So far, we have decided on using National Program for Technology Enhanced Learning(NPTEL)\cite{nptel} online video computer science course transcripts to as they are actual transcripts of lectures taught to students, and as such should have all the content relevant to the course, and will reveal the extent to which a course is dependent on it's prerequisites.
+We observed that both the linear model as well as the neural network performed in a similar fashion with the neural network having a slightly better RMSE value as compared to the linear model. In case of the Portuguese course, the linear model had a better RMSE value. However, on enhancing the neural network further using TensorFlow \cite{tensorflow2015-whitepaper} as described in the previous section, the RMSE value further improved and beat the linear model in both the courses.
 
-As an initial first step in analysing the course material, we have generated wordclouds using R\cite{r} to gain an idea of the types of common words (are the words related to a prerequisite or are they unique to the course), and the frequencies. From these wordclouds, we can see that the words unique to the course, in the courses we have analysed, seem to dominate the words related to any of their prerequisites. In this case, this seems to imply that the dependency levels seems to be low-mid range, compared to the entire content of the course material.
+	\subsection{Validation of Models}
+The next step was to validate our models. That is, we wanted to test how well it
+performs as compared to a predictive model that has already been applied to the
+dataset. This was done by comparing the RMSE values obtained by our models as compared to those obtained in the paper “Using Data Mining To Predict Secondary
+School Student Performance” authored by P. Cortez and A. Silva.
 
-	%---------------------------------------------------------------------------Proposed Solution----------------------------------------------------------------------------------
-\begin{figure}
-	\includegraphics[width=\linewidth]{prereq.png}
-	\caption{Course Dependencies}
-	\label{fig:prereq}
-\end{figure}
-\begin{figure}
-	\includegraphics[width=\linewidth]{projflow.png}
-	\caption{Proposed System Workflow}
-	\label{fig:projflow}
-\end{figure}
-	\section{Proposed Solution}
-We look to address the issue of individual student interest and aptitude understanding before and during course commencement when student professor ratio is many is to one. This system also assists Professors to understand his class at an individualistic level from an aptitude and interest point of view.
+% say the look at tables shit here
 
-Most approaches in this domain deal with performance estimation purely on the basis grades obtained. Our approach is a hybrid of both text analysis as well as numerical analysis which has not been done before as to our knowledge. The text analysis is used to quantify the percentage/level of each prerequisite for a course and the results of the same improves the accuracy of the numerical predictive model. Analysing (Figure\ref{fig:prereq} depicts) the dependency between the two gives us greater insights is to the extent of which the prerequisite course actually affects the new course, which gives us an extra feature to enhance our model's performance . Also while most predictive systems in education deal with just prediction, our system is dynamic in the sense the model varies as and when test, project and assignment scores are updated thereby acting as a counseling system.
-
-The text analysis is primarily based on word frequency generation and entity matching for each course across other courses. Based on the frequency and percentage of match, a metric is developed to determine the weight of each prerequisite required. What also makes this approach unique is the fact that we are not declaring the prerequisites before the analysis and determination of prerequisite weight takes place in an unsupervised manner. Upon generation of the weights post the text analysis we look to build a predictive model using these weights to provide a more detailed estimate of a student's current inclination of the course.
-\fi
+Thus, the results obtained show that through our enhanced neural network we have
+obtained a better RMSE value. This result provides us with a solid foundation to carry our research forward as with the addition of course dependency weights to our model which is our future enhancement we look to further improve the model and thus come one step closer to our aim of making an impact in the field of education through data analytics.
 
 	%---------------------------------------------------------------------------Conclusion----------------------------------------------------------------------------------
 	\section{Conclusion}
-In this project we used a hybrid text and numeric analysis approach to build a course counseling system for education. In the process of doing so we introduced an unsupervised approach to quantify percentage of prerequisite required for a course. The developed model does not have a single task based focus and caters to both student as well as professor needs. Future work includes project matching based on student interests given a repository of projects. This add-on will thus provide a complete course counseling system for education particularly in the undergraduate and graduate level. Keeping the model as the brain at the back-end we can develop a cross platform application (both web and mobile) for a real-time analysis and usage of the solution, with this implementation we are exposed to a whole new set and type of data which can be used to further enhance the model's capabilities. We will have the data of popularity of each course, trends in selection of the course and much more data.
+In this project, we introduced a system to predict student performance. Through this system we hope to make an impact in a number of areas such as student counseling, elective selection, understanding student interest levels before course commencement among others. We built three predictive models and our enhanced neural network had a better accuracy in terms of RMSE values than the values presented by Cortez et. al. \cite{ref:4}. Reduction of error in any field is important and thus this reduction of RMSE value through our work this semester provides a solid foundation to build a very accurate student education support system. We also showed that a number of demographic variables affect student performance and it is not just previous grades although previous grades do have a strong influence. Our future work involves quantifying percentage of pre requisites for each course and using the weights obtained to improve the system.
 
 	%---------------------------------------------------------------------------Acknowledgment----------------------------------------------------------------------------------
 	\section*{Acknowledgment}
- We thank our professors from PES University who provided insight and expertise that greatly assisted the research, although they may not agree with all of the conclusions of this literature survey. We would like to show our gratitude to the Dr. Viraj Kumar, Professor, PES University,\\  Dr. Gowri Srinivasa, Professor, PESIT South Campus and \\ Prof. Shreekanth M. Prabhu , Professor, PES University for giving us this opportunity and sharing their pearls of wisdom with us.
+We thank our professors from PES University who provided insight and expertise that greatly assisted the research, although they may not agree with all of the conclusions of this literature survey. We would like to show our gratitude to the Dr. Viraj Kumar, Professor, PES University,\\  Dr. Gowri Srinivasa, Professor, PESIT South Campus and \\ Prof. Shreekanth M. Prabhu , Professor, PES University for giving us this opportunity and sharing their pearls of wisdom with us.
+
+	%---------------------------------------------------------------------------Contrib----------------------------------------------------------------------------------
+	\section*{Contributions}
+This project was very much a team effort. It was only with the efforts and entusiasm that we managed to complete the project to a satisfactorial level, despite the setbacks that we, as a team, suffered due to the non-availability of the data we needed to perform our original idea for analysis. All steps and work done in the project was a result of heated debates and discussion within the team.\\
+Anush\IEEEauthorrefmark{1} was responsible for building our neural network models.\\
+Sreedhar\IEEEauthorrefmark{2} was responsible for building the linear model, data sourcing, and implementing the simple two-layer neural network model. His work was mostly in R \cite{r}.\\
+Sushrith\IEEEauthorrefmark{3} was responsible for performing text analytics on the course material using NLTK \cite{Loper02nltk:the} and Python, and also used the Deep Neural Network Classifier of TensorFlow \cite{tensorflow2015-whitepaper} to implement the three-layer deep neural network classifier.
+
 \bibliography{ref}
 \bibliographystyle{IEEEtran}
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.19)  19 NOV 2016 12:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.19)  20 NOV 2016 04:18
 entering extended mode
 **./main.tex
 (main.tex
@@ -236,30 +236,65 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 ]
-<ppl.png, id=9, 620.3175pt x 548.0475pt>
-File: ppl.png Graphic file (type png)
- <use ppl.png>
-Package pdftex.def Info: ppl.png used on input line 92.
+<DAProjectSystemFlow.png, id=9, 715.67375pt x 166.6225pt>
+File: DAProjectSystemFlow.png Graphic file (type png)
+
+<use DAProjectSystemFlow.png>
+Package pdftex.def Info: DAProjectSystemFlow.png used on input line 64.
+(pdftex.def)             Requested size: 252.0pt x 58.6696pt.
+
+<neural_net_math.png, id=11, 1927.2pt x 985.6825pt>
+File: neural_net_math.png Graphic file (type png)
+ <use neural_net_math.png>
+Package pdftex.def Info: neural_net_math.png used on input line 69.
+(pdftex.def)             Requested size: 252.0pt x 128.88019pt.
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+
+[2 <./DAProjectSystemFlow.png> <./neural_net_math.png>]
+
+LaTeX Warning: Reference `neural-net' on page 3 undefined on input line 125.
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+<ai-vis.jpg, id=18, 620.0766pt x 548.0475pt>
+File: ai-vis.jpg Graphic file (type jpg)
+ <use ai-vis.jpg>
+Package pdftex.def Info: ai-vis.jpg used on input line 140.
+(pdftex.def)             Requested size: 252.0pt x 222.72737pt.
+
+Underfull \vbox (badness 1097) has occurred while \output is active []
+
+
+<math_lm.png, id=19, 620.3175pt x 548.0475pt>
+File: math_lm.png Graphic file (type png)
+ <use math_lm.png>
+Package pdftex.def Info: math_lm.png used on input line 179.
 (pdftex.def)             Requested size: 252.0pt x 222.63538pt.
 
-<ds.png, id=10, 620.3175pt x 548.0475pt>
-File: ds.png Graphic file (type png)
- <use ds.png>
-Package pdftex.def Info: ds.png used on input line 97.
+<math_nn.png, id=20, 620.3175pt x 548.0475pt>
+File: math_nn.png Graphic file (type png)
+ <use math_nn.png>
+Package pdftex.def Info: math_nn.png used on input line 184.
 (pdftex.def)             Requested size: 252.0pt x 222.63538pt.
- [2]
-<prereq.png, id=14, 545.03625pt x 384.43625pt>
-File: prereq.png Graphic file (type png)
- <use prereq.png>
-Package pdftex.def Info: prereq.png used on input line 110.
-(pdftex.def)             Requested size: 252.0pt x 177.74619pt.
 
-<projflow.png, id=16, 715.67375pt x 183.68625pt>
-File: projflow.png Graphic file (type png)
- <use projflow.png>
-Package pdftex.def Info: projflow.png used on input line 116.
-(pdftex.def)             Requested size: 252.0pt x 64.67792pt.
- [3 <./ppl.png> <./ds.png> <./prereq.png> <./projflow.png>] (main.bbl)
+
+LaTeX Warning: Citation `tensorflow2015-whitepaper' on page 3 undefined on inpu
+t line 189.
+
+[3 <./ai-vis.jpg>]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+ (main.bbl [4 <./math_lm.png (PNG copy)> <./math_nn.png (PNG copy)>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -271,25 +306,29 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4
+[5
 
-] (main.aux) ) 
+] (main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2373 strings out of 493333
- 38443 string characters out of 3139184
- 107934 words of memory out of 3000000
- 5899 multiletter control sequences out of 15000+200000
- 37360 words of font info for 73 fonts, out of 3000000 for 9000
+ 2384 strings out of 493333
+ 38757 string characters out of 3139184
+ 106951 words of memory out of 3000000
+ 5907 multiletter control sequences out of 15000+200000
+ 38496 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,11n,27p,1367b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times
-/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (4 pages, 170096 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/t
+imes/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (5 pages, 792012 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
+ 47 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
