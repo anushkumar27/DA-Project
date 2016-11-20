@@ -1,3 +1,13 @@
+'''
+Sushrith Arkal
+01FB14ECS262
+Sec E, 5th Sem
+PES University
+
+Script to find words in two courses, get the common
+words and find the fraction of common words.
+'''
+
 import nltk as nlp
 from nltk.stem.snowball import SnowballStemmer
 import PyPDF2
@@ -5,11 +15,10 @@ import os
 
 def get_stopwords(stopfile):
 	# get the stopwords
-	#TODO: add more stopwords
 	stopwords = set(nlp.corpus.stopwords.words('english'))
 	stopwords += set([',', ':', '.','!', '?', ';', '\'', '"', '&', '@', '^', '$', '<', '>', '(', ')', '{', '}', '~', '`', 'etc'])
 	for stop in stopfile:
-		stopwords.add() #TODO
+		stopwords.add(stop.strip())
 	return stopwords
 
 def get_top_n(folder, n, proportion = True, need_to_stem = False, stopwords = set(nlp.corpus.stopwords.words('english'))): #takes the folder containing the pdf files
@@ -27,7 +36,6 @@ def get_top_n(folder, n, proportion = True, need_to_stem = False, stopwords = se
 			text = page.extractText()
 			lec_doc += text.encode("ascii", "ignore") # replace with utf-8 if needed
 		document += lec_doc
-		# print('processed ' + lecture)
 	## clean the document byte object
 
 	# convert to string
@@ -65,18 +73,15 @@ def get_top_n(folder, n, proportion = True, need_to_stem = False, stopwords = se
 stopwords = get_stopwords(open('stopwords'))
 
 num_core, core = get_top_n('high-perf-comp', 100, False, True, stopwords)
-num_prereq, prereq = get_top_n('comp_netw', 100, False, True, stopwords)
+num_prereq, prereq = get_top_n('comp-netw', 100, False, True, stopwords)
 
 prereq_set = set([t[0] for t in prereq])
 core_set = set([t[0] for t in core])
 
-int_set = prereq_set & core_set
+int_set = prereq_set & core_set # get intersection
 num_common = len(int_set)
 
 print('num intersect words:', num_common)
-print(int_set)
-print(num_prereq)
-print((num_common/num_prereq) * 100)
-
-'''
-'''
+#print('intersection: ', int_set)
+print('num of words in prereq:', num_prereq)
+print((num_common/num_prereq) * 100) #fraction of dependency

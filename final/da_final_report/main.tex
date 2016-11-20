@@ -3,7 +3,7 @@
 \begin{document}
 	\title{A Neural Network and Linear Model Approach Towards Performance Prediction For Secondary School Students}
     	\author{\IEEEauthorblockN{Anush S. Kumar\IEEEauthorrefmark{1},
-					  Sreedhar Radhakirshnan\IEEEauthorrefmark{2} and
+					  Sreedhar Radhakrishnan\IEEEauthorrefmark{2} and
 					  Sushrith Shriniwas Arkal\IEEEauthorrefmark{3}}
 		\IEEEauthorblockA{Department of Computer Science and Engineering\\
 					PES University, Bangalore\\
@@ -18,7 +18,16 @@
 	% make the title area
 	\maketitle
 	\pagenumbering{arabic}
-	%--------------------------------------------------------------------------- Abstract----------------------------------------------------------------------------------
+
+	%------------------------Concepts---------------------------
+	\section*{Keywords}                       
+Neural networks,                     
+Regression,
+Linear model,
+Education,
+Predictive analytics,
+Text analytics\\
+\newline	%--------------------------------------------------------------------------- Abstract----------------------------------------------------------------------------------
 	\begin{abstract}
 In this project we introduce a neural network and linear model approach to predict performance of students studying in secondary school. The practice of examining large pre-existing databases in order to generate new information helps us predict the outcomes with some certainty. With the help of such outcomes it is easy to make some hard decisions easily and also to plan the future events, one such application is the aim of this project. We are using around 10 attributes of different category that are not only academical in nature but also taking into account the socio-demographic condition of the student into the picture. 
 %All this was possible with the data available in the UCI Machine Learning Repository's Student Performance Data Set \cite{Lichman:2013}\cite{ref:4}. 
@@ -56,12 +65,12 @@ This model not only helps a student plan his/her approach for a course in a bett
 However, due non-availability of data, we couldn't accomplish the desired anaysis. The future work we have planned includes incorporating the measures of dependencies among courses into the model we have built in the project, and then using the model to generate a course approach plan for each student as well as a directed project allocation based on student interest given a repository of projects by the professor.
 
 	\section{Problem Statement}
-Originally, in the beginning of this project, we were looking to build a predictive model that determined student performance in a selected course, by taking into account their previous performaces, giving special importance to their performance in the prerequistes that are officially cited in the selected course. However, as we were unable to acquire data that we needed for this purpose (namely, the data relating to the students' grades in courses taken in PES University), we were forced to redirect our attention to the UCI Student Performance dataset\cite{Lichman:2013}\cite{ref:4}, and due to the nature of the data, we were forced to drop our original project work we had done with text analytics to determine the level of dependency of a course on its prerequisites.
+Originally, in the beginning of this project, we were looking to build a predictive model that determined student performance in a selected course, by taking into account their previous performaces, giving special importance to their performance in the prerequistes that are officially cited in the selected course. However, as we were unable to acquire data that we needed for this purpose (namely, the data relating to the students' grades in courses taken in PES University), we were forced to redirect our attention to the UCI Student Performance dataset \cite{Lichman:2013}\cite{ref:4}, and due to the nature of the data, we were forced to drop our original project work we had done with text analytics to determine the level of dependency of a course on its prerequisites.
 
 In this research project have built a model that takes into account, for each student, their previous performance in a course, their health, the amount of time they study, etc. and make a prediction for the performance of the student in a selected course. Since the dataset we used only had information of performance of students in the subjects of Mathematics and Portuguese, courses for which we cannot easily determine prerequisutes since they are fundamental subjects, we were unable to carry forth our original intention of making predictions by looking at the prerequisites of a course and determining the student's performance by taking into account their performance in the prerequisites. (We hope to receive the opportunity to perform this analysis later on during our holidays.)
 %This analysis not only takes into account the previous grades and other demographic variables but also also takes into account the level of dependency between the prequisite courses and the selected course. That is, we have quantified the percentage of pre requsite that each course has. Although our long term vision is to apply these findings and build a system for the students of PES University, due to lack of availability of data with respect to PES Students we have built two predictive models using the UCI Exam Performance dataset with variables such as health,T1 and T2 performances,family relationships among others.
 
-In order to validate our models, we compared the performance of our models with those obtained in the research paper "Using Data Mining to Predict Secondary School Student Performance"\cite{ref:4} since the work in the aforementioned paper was done on the same dataset. On comparison, we have obtained exciting results, which have been discussed in section \ref{expts-reslts}.
+In order to validate our models, we compared the performance of our models with those obtained by Cortez et. al. \cite{ref:4} since the work in the aforementioned paper was done on the same dataset. On comparison, we have obtained exciting results, which have been discussed in section \ref{expts-reslts}.
 
 We plan to integrate the results obtained on determining the prerequisite dependency and the predictive models built using the UCI Exam Performance Dataset \cite{Lichman:2013}\cite{ref:4} to build a similar system for PES University that aims to better predict student performance.
 
@@ -75,7 +84,7 @@ We plan to integrate the results obtained on determining the prerequisite depend
 \end{figure}
 \begin{figure}
 	\includegraphics[width=\linewidth]{neural_net_math.png}
-	\caption{Neural Network}
+	\caption{Neural Network for Mathematics Prediction}
 	\label{fig:neural-net}
 \end{figure}
 
@@ -98,8 +107,8 @@ would like to first illustrate the basic workflow of the system.
 The first component we would like to explain is that of extraction of prerequisite
 weights given a course corpus using text analysis.
 
-The first step in this section was to web scrape NPTEL course transcripts from the
-NPTEL website. This was accomplished with a python script. We then used R and applied 
+The first step in this section was to web scrape NPTEL Course Transcripts from the
+NPTEL website \cite{nptel}. This was accomplished with a python script. We then used R \cite{r} and applied 
 text analysis concepts such as stop-word removal, stemming and term document matrix 
 on each of the transcripts. The next step involved defining a threshold and extracting 
 all the words that occur greater than or equal to the value of the threshold defined.
@@ -130,7 +139,7 @@ student was about during the course (absences) as well as the overall health of 
 student. The final prediction is that of predicted course outcome denoted by G3.
 The neural network also has two hidden layers with 3 and 5 neurons respectively. A
 visualisation of the neural network built and trained with respect to the math course
-present in the UCI Exam Performance dataset is shown in Fig. \ref{neural-net}.
+present in the UCI Exam Performance dataset is shown in Fig. \ref{fig:neural-net}.
 The black lines show the connections between each layer and the weights on each
 connection while the blue lines show the bias term added in each step.
 
@@ -292,7 +301,7 @@ We thank our professors from PES University who provided insight and expertise t
 	%---------------------------------------------------------------------------Contrib----------------------------------------------------------------------------------
 	\section*{Contributions}
 This project was very much a team effort. It was only with the efforts and entusiasm that we managed to complete the project to a satisfactorial level, despite the setbacks that we, as a team, suffered due to the non-availability of the data we needed to perform our original idea for analysis. All steps and work done in the project was a result of heated debates and discussion within the team.\\
-Anush\IEEEauthorrefmark{1} was responsible for building our neural network models.\\
+Anush\IEEEauthorrefmark{1} was responsible for designing our neural network models.\\
 Sreedhar\IEEEauthorrefmark{2} was responsible for building the linear model, data sourcing, and implementing the simple two-layer neural network model. His work was mostly in R \cite{r}.\\
 Sushrith\IEEEauthorrefmark{3} was responsible for performing text analytics on the course material using NLTK \cite{Loper02nltk:the} and Python, and also used the Deep Neural Network Classifier of TensorFlow \cite{tensorflow2015-whitepaper} to implement the three-layer deep neural network classifier.
 

@@ -1,25 +1,34 @@
+'''
+Sushrith Arkal & Anush Kumar 
+01FB14ECS262 & 01FB14ECS037
+Sec E & A (resp.), 5th Sem
+PES University
+
+Script to perform Deep Neural Net classification using TensorFlow
+'''
+
 import tensorflow as tf
 import numpy as np
 import math
 import shutil
 
-'''por: ~ 1.48 - 2.05'''
+''' To run the classifier on maths data, change to following to `mat` '''
+DATASET = 'por'
 
-STU_TRAINING = 'stu-por-train.csv'
-STU_TEST = 'stu-por-test.csv'
-MODEL_DIR = 'por-model'
-STEPS = 5550
-shutil.rmtree(MODEL_DIR, ignore_errors=True)
-
-
-'''mat: ~ 1.78 - 2.5'''
-'''
-STU_TRAINING = 'stu-mat-train.csv'
-STU_TEST = 'stu-mat-test.csv'
-MODEL_DIR = 'mat-model'
-STEPS = 2000
-shutil.rmtree(MODEL_DIR, ignore_errors=True)
-'''
+if DATASET == 'por':
+	'''por: ~ 1.48 - 2.05'''
+	STU_TRAINING = 'stu-por-train.csv'
+	STU_TEST = 'stu-por-test.csv'
+	MODEL_DIR = 'por-model'
+	STEPS = 5550
+	shutil.rmtree(MODEL_DIR, ignore_errors=True)
+else:
+	'''mat: ~ 1.78 - 2.5'''
+	STU_TRAINING = 'stu-mat-train.csv'
+	STU_TEST = 'stu-mat-test.csv'
+	MODEL_DIR = 'mat-model'
+	STEPS = 2000
+	shutil.rmtree(MODEL_DIR, ignore_errors=True)
 
 
 #training_set = tf.contrib.learn.datasets.base.load_csv(filename=IRIS_TRAINING, target = np.int)
